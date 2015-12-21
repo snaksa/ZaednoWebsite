@@ -4,3 +4,8 @@ D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\bin\FullSchoolWebs
 D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\bin\CKEditor.NET.pdb
 D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.dll
 D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.pdb
+E:\Windows\ZaednoWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.dll.config
+E:\Windows\ZaednoWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.dll
+E:\Windows\ZaednoWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.pdb
+E:\Windows\ZaednoWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.dll
+E:\Windows\ZaednoWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.pdb
