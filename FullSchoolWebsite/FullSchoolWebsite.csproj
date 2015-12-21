@@ -1,0 +1,997 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1A3C9AA-2202-4BC4-A901-23C325C14C6E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FullSchoolWebsite</RootNamespace>
+    <AssemblyName>FullSchoolWebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CKEditor.NET, Version=3.6.6.2, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Sinan\Desktop\ckeditor\bin\Release\CKEditor.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUs.aspx" />
+    <Content Include="AdminPanel\AddAdmin.aspx" />
+    <Content Include="AdminPanel\AddAndRemoveFile.aspx" />
+    <Content Include="AdminPanel\AddContest.aspx" />
+    <Content Include="AdminPanel\AddGallery.aspx" />
+    <Content Include="AdminPanel\AddNews.aspx" />
+    <Content Include="AdminPanel\AddWork.aspx" />
+    <Content Include="AdminPanel\ckeditor\adapters\jquery.js" />
+    <Content Include="AdminPanel\ckeditor\build-config.js" />
+    <Content Include="AdminPanel\ckeditor\ckeditor.js" />
+    <Content Include="AdminPanel\ckeditor\config.js" />
+    <Content Include="AdminPanel\ckeditor\contents.css" />
+    <Content Include="AdminPanel\ckeditor\lang\af.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ar.js" />
+    <Content Include="AdminPanel\ckeditor\lang\bg.js" />
+    <Content Include="AdminPanel\ckeditor\lang\bn.js" />
+    <Content Include="AdminPanel\ckeditor\lang\bs.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ca.js" />
+    <Content Include="AdminPanel\ckeditor\lang\cs.js" />
+    <Content Include="AdminPanel\ckeditor\lang\cy.js" />
+    <Content Include="AdminPanel\ckeditor\lang\da.js" />
+    <Content Include="AdminPanel\ckeditor\lang\de.js" />
+    <Content Include="AdminPanel\ckeditor\lang\el.js" />
+    <Content Include="AdminPanel\ckeditor\lang\en-au.js" />
+    <Content Include="AdminPanel\ckeditor\lang\en-ca.js" />
+    <Content Include="AdminPanel\ckeditor\lang\en-gb.js" />
+    <Content Include="AdminPanel\ckeditor\lang\en.js" />
+    <Content Include="AdminPanel\ckeditor\lang\eo.js" />
+    <Content Include="AdminPanel\ckeditor\lang\es.js" />
+    <Content Include="AdminPanel\ckeditor\lang\et.js" />
+    <Content Include="AdminPanel\ckeditor\lang\eu.js" />
+    <Content Include="AdminPanel\ckeditor\lang\fa.js" />
+    <Content Include="AdminPanel\ckeditor\lang\fi.js" />
+    <Content Include="AdminPanel\ckeditor\lang\fo.js" />
+    <Content Include="AdminPanel\ckeditor\lang\fr-ca.js" />
+    <Content Include="AdminPanel\ckeditor\lang\fr.js" />
+    <Content Include="AdminPanel\ckeditor\lang\gl.js" />
+    <Content Include="AdminPanel\ckeditor\lang\gu.js" />
+    <Content Include="AdminPanel\ckeditor\lang\he.js" />
+    <Content Include="AdminPanel\ckeditor\lang\hi.js" />
+    <Content Include="AdminPanel\ckeditor\lang\hr.js" />
+    <Content Include="AdminPanel\ckeditor\lang\hu.js" />
+    <Content Include="AdminPanel\ckeditor\lang\id.js" />
+    <Content Include="AdminPanel\ckeditor\lang\is.js" />
+    <Content Include="AdminPanel\ckeditor\lang\it.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ja.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ka.js" />
+    <Content Include="AdminPanel\ckeditor\lang\km.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ko.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ku.js" />
+    <Content Include="AdminPanel\ckeditor\lang\lt.js" />
+    <Content Include="AdminPanel\ckeditor\lang\lv.js" />
+    <Content Include="AdminPanel\ckeditor\lang\mk.js" />
+    <Content Include="AdminPanel\ckeditor\lang\mn.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ms.js" />
+    <Content Include="AdminPanel\ckeditor\lang\nb.js" />
+    <Content Include="AdminPanel\ckeditor\lang\nl.js" />
+    <Content Include="AdminPanel\ckeditor\lang\no.js" />
+    <Content Include="AdminPanel\ckeditor\lang\pl.js" />
+    <Content Include="AdminPanel\ckeditor\lang\pt-br.js" />
+    <Content Include="AdminPanel\ckeditor\lang\pt.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ro.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ru.js" />
+    <Content Include="AdminPanel\ckeditor\lang\si.js" />
+    <Content Include="AdminPanel\ckeditor\lang\sk.js" />
+    <Content Include="AdminPanel\ckeditor\lang\sl.js" />
+    <Content Include="AdminPanel\ckeditor\lang\sq.js" />
+    <Content Include="AdminPanel\ckeditor\lang\sr-latn.js" />
+    <Content Include="AdminPanel\ckeditor\lang\sr.js" />
+    <Content Include="AdminPanel\ckeditor\lang\sv.js" />
+    <Content Include="AdminPanel\ckeditor\lang\th.js" />
+    <Content Include="AdminPanel\ckeditor\lang\tr.js" />
+    <Content Include="AdminPanel\ckeditor\lang\tt.js" />
+    <Content Include="AdminPanel\ckeditor\lang\ug.js" />
+    <Content Include="AdminPanel\ckeditor\lang\uk.js" />
+    <Content Include="AdminPanel\ckeditor\lang\vi.js" />
+    <Content Include="AdminPanel\ckeditor\lang\zh-cn.js" />
+    <Content Include="AdminPanel\ckeditor\lang\zh.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="AdminPanel\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\icons.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="AdminPanel\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="AdminPanel\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="AdminPanel\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="AdminPanel\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="AdminPanel\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="AdminPanel\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="AdminPanel\ckeditor\samples\ajax.html" />
+    <Content Include="AdminPanel\ckeditor\samples\api.html" />
+    <Content Include="AdminPanel\ckeditor\samples\appendto.html" />
+    <Content Include="AdminPanel\ckeditor\samples\assets\inlineall\logo.png" />
+    <Content Include="AdminPanel\ckeditor\samples\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="AdminPanel\ckeditor\samples\assets\sample.jpg" />
+    <Content Include="AdminPanel\ckeditor\samples\assets\uilanguages\languages.js" />
+    <Content Include="AdminPanel\ckeditor\samples\datafiltering.html" />
+    <Content Include="AdminPanel\ckeditor\samples\divreplace.html" />
+    <Content Include="AdminPanel\ckeditor\samples\index.html" />
+    <Content Include="AdminPanel\ckeditor\samples\inlineall.html" />
+    <Content Include="AdminPanel\ckeditor\samples\inlinebycode.html" />
+    <Content Include="AdminPanel\ckeditor\samples\inlinetextarea.html" />
+    <Content Include="AdminPanel\ckeditor\samples\jquery.html" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\dialog\assets\my_dialog.js" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\dialog\dialog.html" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\enterkey\enterkey.html" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\htmlwriter\outputforflash.html" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\htmlwriter\outputhtml.html" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\magicline\magicline.html" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\toolbar\toolbar.html" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\wysiwygarea\fullpage.html" />
+    <Content Include="AdminPanel\ckeditor\samples\readonly.html" />
+    <Content Include="AdminPanel\ckeditor\samples\replacebyclass.html" />
+    <Content Include="AdminPanel\ckeditor\samples\replacebycode.html" />
+    <Content Include="AdminPanel\ckeditor\samples\sample.css" />
+    <Content Include="AdminPanel\ckeditor\samples\sample.js" />
+    <Content Include="AdminPanel\ckeditor\samples\tabindex.html" />
+    <Content Include="AdminPanel\ckeditor\samples\uicolor.html" />
+    <Content Include="AdminPanel\ckeditor\samples\uilanguages.html" />
+    <Content Include="AdminPanel\ckeditor\samples\xhtmlstyle.html" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\dialog.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\editor.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\icons.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\images\close.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="AdminPanel\ckeditor\styles.js" />
+    <Content Include="AdminPanel\css\Alerts.css" />
+    <Content Include="AdminPanel\css\ie.css" />
+    <Content Include="AdminPanel\css\layout.css" />
+    <Content Include="AdminPanel\EditAcceptedNews.aspx" />
+    <Content Include="AdminPanel\EditAcceptedWorks.aspx" />
+    <Content Include="AdminPanel\EditAdmin.aspx" />
+    <Content Include="AdminPanel\EditContests.aspx" />
+    <Content Include="AdminPanel\EditGalleries.aspx" />
+    <Content Include="AdminPanel\EditMainNews.aspx" />
+    <Content Include="AdminPanel\EditSingleContest.aspx" />
+    <Content Include="AdminPanel\EditSingleFile.aspx" />
+    <Content Include="AdminPanel\EditSingleGallery.aspx" />
+    <Content Include="AdminPanel\EditSingleNews.aspx" />
+    <Content Include="AdminPanel\EditStatements.aspx" />
+    <Content Include="AdminPanel\images\285x200.jpg" />
+    <Content Include="AdminPanel\images\590x260.jpg" />
+    <Content Include="AdminPanel\images\940x370.jpg" />
+    <Content Include="AdminPanel\images\accept.png" />
+    <Content Include="AdminPanel\images\addImage.png" />
+    <Content Include="AdminPanel\images\article.png" />
+    <Content Include="AdminPanel\images\bargraph.png" />
+    <Content Include="AdminPanel\images\breadcrumb_divider.png" />
+    <Content Include="AdminPanel\images\btn_submit.png" />
+    <Content Include="AdminPanel\images\btn_submit_2.png" />
+    <Content Include="AdminPanel\images\btn_view_site.png" />
+    <Content Include="AdminPanel\images\cup.png" />
+    <Content Include="AdminPanel\images\deleteComment.png" />
+    <Content Include="AdminPanel\images\deleteIcon.png" />
+    <Content Include="AdminPanel\images\deleteImage.png" />
+    <Content Include="AdminPanel\images\header_bg.png" />
+    <Content Include="AdminPanel\images\header_shadow.png" />
+    <Content Include="AdminPanel\images\heart.png" />
+    <Content Include="AdminPanel\images\icn_add_user.png" />
+    <Content Include="AdminPanel\images\icn_alert_error.png" />
+    <Content Include="AdminPanel\images\icn_alert_info.png" />
+    <Content Include="AdminPanel\images\icn_alert_success.png" />
+    <Content Include="AdminPanel\images\icn_alert_warning.png" />
+    <Content Include="AdminPanel\images\icn_audio.png" />
+    <Content Include="AdminPanel\images\icn_categories.png" />
+    <Content Include="AdminPanel\images\icn_edit.png" />
+    <Content Include="AdminPanel\images\icn_edit_article.png" />
+    <Content Include="AdminPanel\images\icn_folder.png" />
+    <Content Include="AdminPanel\images\icn_jump_back.png" />
+    <Content Include="AdminPanel\images\icn_logout.png" />
+    <Content Include="AdminPanel\images\icn_new_article.png" />
+    <Content Include="AdminPanel\images\icn_photo.png" />
+    <Content Include="AdminPanel\images\icn_profile.png" />
+    <Content Include="AdminPanel\images\icn_search.png" />
+    <Content Include="AdminPanel\images\icn_security.png" />
+    <Content Include="AdminPanel\images\icn_settings.png" />
+    <Content Include="AdminPanel\images\icn_tags.png" />
+    <Content Include="AdminPanel\images\icn_trash.png" />
+    <Content Include="AdminPanel\images\icn_user.png" />
+    <Content Include="AdminPanel\images\icn_video.png" />
+    <Content Include="AdminPanel\images\icn_view_users.png" />
+    <Content Include="AdminPanel\images\lightbulb.png" />
+    <Content Include="AdminPanel\images\loadComments.png" />
+    <Content Include="AdminPanel\images\message.png" />
+    <Content Include="AdminPanel\images\module_footer_bg.png" />
+    <Content Include="AdminPanel\images\post_message.png" />
+    <Content Include="AdminPanel\images\refuse.png" />
+    <Content Include="AdminPanel\images\secondary_bar.png" />
+    <Content Include="AdminPanel\images\secondary_bar_shadow.png" />
+    <Content Include="AdminPanel\images\show.png" />
+    <Content Include="AdminPanel\images\sidebar.png" />
+    <Content Include="AdminPanel\images\sidebar_divider.png" />
+    <Content Include="AdminPanel\images\sidebar_shadow.png" />
+    <Content Include="AdminPanel\images\table_sorter_header.png" />
+    <Content Include="AdminPanel\Index.aspx" />
+    <Content Include="AdminPanel\js\hideshow.js" />
+    <Content Include="AdminPanel\js\jquery-1.5.2.min.js" />
+    <Content Include="AdminPanel\js\jquery.equalHeight.js" />
+    <Content Include="AdminPanel\js\jquery.tablesorter.min.js" />
+    <Content Include="AdminPanel\js\myJSfunctions.js" />
+    <Content Include="AdminPanel\ShowAcceptedNews.aspx" />
+    <Content Include="AdminPanel\ShowAcceptedWorks.aspx" />
+    <Content Include="AdminPanel\ShowAllAdmins.aspx" />
+    <Content Include="AdminPanel\ShowSuggestedNews.aspx" />
+    <Content Include="AdminPanel\ShowSuggestedWorks.aspx" />
+    <Content Include="background\grunge.jpg" />
+    <Content Include="Contests.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="errorPage.jpg" />
+    <Content Include="Files.aspx" />
+    <Content Include="files\01%281%29.jpg" />
+    <Content Include="files\01.jpg" />
+    <Content Include="files\02%281%29.jpg" />
+    <Content Include="files\02.jpg" />
+    <Content Include="files\03%281%29.jpg" />
+    <Content Include="files\03.jpg" />
+    <Content Include="files\04%281%29.jpg" />
+    <Content Include="files\04.jpg" />
+    <Content Include="files\285x200.jpg" />
+    <Content Include="files\590x260.jpg" />
+    <Content Include="files\article32.png" />
+    <Content Include="files\baguetteBox.css" />
+    <Content Include="files\bargraph32.png" />
+    <Content Include="files\blue.jpg" />
+    <Content Include="files\boxupload32.png" />
+    <Content Include="files\btn_back.png" />
+    <Content Include="files\btn_next.png" />
+    <Content Include="files\cb_scout2.png" />
+    <Content Include="files\circleright32.png" />
+    <Content Include="files\comments.css" />
+    <Content Include="files\cup32.png" />
+    <Content Include="files\custom.js" />
+    <Content Include="files\dribbble_32.png" />
+    <Content Include="files\exchange32.png" />
+    <Content Include="files\facebook_32.png" />
+    <Content Include="files\feature-post-shadow.png" />
+    <Content Include="files\folder32.png" />
+    <Content Include="files\footer-divider.png" />
+    <Content Include="files\footer-glare.png" />
+    <Content Include="files\form-validation.js" />
+    <Content Include="files\front-cover.png" />
+    <Content Include="files\gallery.htm" />
+    <Content Include="files\google_white2.png" />
+    <Content Include="files\grunge.jpg" />
+    <Content Include="files\headline-bg.png" />
+    <Content Include="files\heart32.png" />
+    <Content Include="files\hoverIntent.js" />
+    <Content Include="files\images\about_us.png" />
+    <Content Include="files\images\authorPic.png" />
+    <Content Include="files\images\competition.png" />
+    <Content Include="files\images\datePic.png" />
+    <Content Include="files\images\emailPic.png" />
+    <Content Include="files\images\gallery.png" />
+    <Content Include="files\images\news.png" />
+    <Content Include="files\images\news_reporter.png" />
+    <Content Include="files\images\userPic.png" />
+    <Content Include="files\imgs8.png" />
+    <Content Include="files\jquery.min.js" />
+    <Content Include="files\jquery.poshytip.min.js" />
+    <Content Include="files\jquery.prettyPhoto.js" />
+    <Content Include="files\jquery.tweet.css" />
+    <Content Include="files\jquery.tweet.js" />
+    <Content Include="files\lightbulb32.png" />
+    <Content Include="files\loginForm\loginStyle.css" />
+    <Content Include="files\logo.png" />
+    <Content Include="files\mapcnt3.png" />
+    <Content Include="files\marker.png" />
+    <Content Include="files\nav-bullet.png" />
+    <Content Include="files\plus.png" />
+    <Content Include="files\prettyPhoto.css" />
+    <Content Include="files\quicksand.js" />
+    <Content Include="files\rainbow.jpg" />
+    <Content Include="files\reel-back.png" />
+    <Content Include="files\reel-left.png" />
+    <Content Include="files\reel-right.png" />
+    <Content Include="files\reset.css" />
+    <Content Include="files\ribbon.png" />
+    <Content Include="files\shadow-divider.png" />
+    <Content Include="files\slider.js" />
+    <Content Include="files\slides.min.jquery.js" />
+    <Content Include="files\social-icons.css" />
+    <Content Include="files\spaces.jpg" />
+    <Content Include="files\style.css" />
+    <Content Include="files\superfish.js" />
+    <Content Include="files\supersubs.js" />
+    <Content Include="files\testImage.jpg" />
+    <Content Include="files\tip-twitter.css" />
+    <Content Include="files\tip-yellowsimple.css" />
+    <Content Include="files\twilight.jpg" />
+    <Content Include="files\twitter_32.png" />
+    <Content Include="files\ver-1x1.png" />
+    <Content Include="files\video.jpg" />
+    <Content Include="files\wrapper-bg.png" />
+    <Content Include="files\{common,map,overlay,util,marker}.js" />
+    <Content Include="files\{controls,stats}.js" />
+    <Content Include="files\{main,adsense,geometry,zombie}.js" />
+    <Content Include="files\{onion,infowindow}.js" />
+    <Content Include="Galleries.aspx" />
+    <Content Include="img\01%281%29.jpg" />
+    <Content Include="img\01.jpg" />
+    <Content Include="img\02%281%29.jpg" />
+    <Content Include="img\02.jpg" />
+    <Content Include="img\03%281%29.jpg" />
+    <Content Include="img\03.jpg" />
+    <Content Include="img\04%281%29.jpg" />
+    <Content Include="img\04.jpg" />
+    <Content Include="img\article32.png" />
+    <Content Include="img\bargraph32.png" />
+    <Content Include="img\bg\blue.jpg" />
+    <Content Include="img\bg\grunge.jpg" />
+    <Content Include="img\bg\rainbow.jpg" />
+    <Content Include="img\bg\spaces.jpg" />
+    <Content Include="img\bg\twilight.jpg" />
+    <Content Include="img\blockquote.png" />
+    <Content Include="img\blue.jpg" />
+    <Content Include="img\botevLogo.png" />
+    <Content Include="img\botevLogoIco.ico" />
+    <Content Include="img\boxupload32.png" />
+    <Content Include="img\btn_back.png" />
+    <Content Include="img\btn_next.png" />
+    <Content Include="img\circleright32.png" />
+    <Content Include="img\cup32.png" />
+    <Content Include="img\defaultPageGirl.jpg" />
+    <Content Include="img\dislike.png" />
+    <Content Include="img\dribbble_32.png" />
+    <Content Include="img\error404.png" />
+    <Content Include="img\exchange32.png" />
+    <Content Include="img\facebook_32.png" />
+    <Content Include="img\filesSection.png" />
+    <Content Include="img\folder32.png" />
+    <Content Include="img\footer-divider.png" />
+    <Content Include="img\footer-glare.png" />
+    <Content Include="img\front-cover.png" />
+    <Content Include="img\grunge.jpg" />
+    <Content Include="img\headline-bg.png" />
+    <Content Include="img\heart32.png" />
+    <Content Include="img\icon-pop.png" />
+    <Content Include="img\layout-buttons.png" />
+    <Content Include="img\lightbulb32.png" />
+    <Content Include="img\like.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\meta-date.png" />
+    <Content Include="img\nav-bullet.png" />
+    <Content Include="img\page-title.png" />
+    <Content Include="img\plus.png" />
+    <Content Include="img\png-patterns\ver-1x1.png" />
+    <Content Include="img\rainbow.jpg" />
+    <Content Include="img\reel-back.png" />
+    <Content Include="img\reel-left.png" />
+    <Content Include="img\reel-right.png" />
+    <Content Include="img\ribbon.png" />
+    <Content Include="img\shadow-divider.png" />
+    <Content Include="img\sidebar-header.png" />
+    <Content Include="img\slider\btn_back.png" />
+    <Content Include="img\slider\btn_next.png" />
+    <Content Include="img\social-icons\circular\dribbble_32.png" />
+    <Content Include="img\social-icons\circular\exchange32.png" />
+    <Content Include="img\social-icons\circular\facebook_32.png" />
+    <Content Include="img\social-icons\circular\folder32.png" />
+    <Content Include="img\social-icons\circular\twitter_32.png" />
+    <Content Include="img\spaces.jpg" />
+    <Content Include="img\twilight.jpg" />
+    <Content Include="img\twitter_32.png" />
+    <Content Include="img\ver-1x1.png" />
+    <Content Include="img\visitors.png" />
+    <Content Include="img\wrapper-bg.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="img\writer.jpg" />
+    <Content Include="js\baguetteBox.js" />
+    <Content Include="js\plugins.js" />
+    <Content Include="js\slider.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="Password.aspx" />
+    <Content Include="Reporter.aspx" />
+    <Content Include="ReporterShowNews.aspx" />
+    <Content Include="serverError.html" />
+    <Content Include="ShowContest.aspx" />
+    <Content Include="ShowGallery.aspx" />
+    <Content Include="ShowWork.aspx" />
+    <Content Include="SuggestNews.aspx" />
+    <Content Include="SuggestWork.aspx" />
+    <Content Include="ViewSuggestedNews.aspx" />
+    <Content Include="ViewSuggestedWorks.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Works.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddAdmin.aspx.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddAdmin.aspx.designer.cs">
+      <DependentUpon>AddAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddAndRemoveFile.aspx.cs">
+      <DependentUpon>AddAndRemoveFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddAndRemoveFile.aspx.designer.cs">
+      <DependentUpon>AddAndRemoveFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddContest.aspx.cs">
+      <DependentUpon>AddContest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddContest.aspx.designer.cs">
+      <DependentUpon>AddContest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddGallery.aspx.cs">
+      <DependentUpon>AddGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddGallery.aspx.designer.cs">
+      <DependentUpon>AddGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddNews.aspx.cs">
+      <DependentUpon>AddNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddNews.aspx.designer.cs">
+      <DependentUpon>AddNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddWork.aspx.cs">
+      <DependentUpon>AddWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddWork.aspx.designer.cs">
+      <DependentUpon>AddWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AdminPanel.Master.cs">
+      <DependentUpon>AdminPanel.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdminPanel.Master.designer.cs">
+      <DependentUpon>AdminPanel.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Classes\Admin.cs" />
+    <Compile Include="AdminPanel\Classes\Contest.cs" />
+    <Compile Include="AdminPanel\Classes\Gallery.cs" />
+    <Compile Include="AdminPanel\Classes\MainImage.cs" />
+    <Compile Include="AdminPanel\Classes\MessageFromUser.cs" />
+    <Compile Include="AdminPanel\Classes\MyFile.cs" />
+    <Compile Include="AdminPanel\Classes\News.cs" />
+    <Compile Include="AdminPanel\Classes\NewsComment.cs" />
+    <Compile Include="AdminPanel\Classes\PictureInGallery.cs" />
+    <Compile Include="AdminPanel\Classes\PostOnTheWall.cs" />
+    <Compile Include="AdminPanel\Classes\Statement.cs" />
+    <Compile Include="AdminPanel\EditAcceptedNews.aspx.cs">
+      <DependentUpon>EditAcceptedNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditAcceptedNews.aspx.designer.cs">
+      <DependentUpon>EditAcceptedNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditAcceptedWorks.aspx.cs">
+      <DependentUpon>EditAcceptedWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditAcceptedWorks.aspx.designer.cs">
+      <DependentUpon>EditAcceptedWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditAdmin.aspx.cs">
+      <DependentUpon>EditAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditAdmin.aspx.designer.cs">
+      <DependentUpon>EditAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditContests.aspx.cs">
+      <DependentUpon>EditContests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditContests.aspx.designer.cs">
+      <DependentUpon>EditContests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditGalleries.aspx.cs">
+      <DependentUpon>EditGalleries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditGalleries.aspx.designer.cs">
+      <DependentUpon>EditGalleries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditMainNews.aspx.cs">
+      <DependentUpon>EditMainNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditMainNews.aspx.designer.cs">
+      <DependentUpon>EditMainNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditSingleContest.aspx.cs">
+      <DependentUpon>EditSingleContest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditSingleContest.aspx.designer.cs">
+      <DependentUpon>EditSingleContest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditSingleFile.aspx.cs">
+      <DependentUpon>EditSingleFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditSingleFile.aspx.designer.cs">
+      <DependentUpon>EditSingleFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditSingleGallery.aspx.cs">
+      <DependentUpon>EditSingleGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditSingleGallery.aspx.designer.cs">
+      <DependentUpon>EditSingleGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditSingleNews.aspx.cs">
+      <DependentUpon>EditSingleNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditSingleNews.aspx.designer.cs">
+      <DependentUpon>EditSingleNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\EditStatements.aspx.cs">
+      <DependentUpon>EditStatements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\EditStatements.aspx.designer.cs">
+      <DependentUpon>EditStatements.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Classes\Image.cs" />
+    <Compile Include="AdminPanel\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ShowAcceptedNews.aspx.cs">
+      <DependentUpon>ShowAcceptedNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ShowAcceptedNews.aspx.designer.cs">
+      <DependentUpon>ShowAcceptedNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ShowAcceptedWorks.aspx.cs">
+      <DependentUpon>ShowAcceptedWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ShowAcceptedWorks.aspx.designer.cs">
+      <DependentUpon>ShowAcceptedWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ShowAllAdmins.aspx.cs">
+      <DependentUpon>ShowAllAdmins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ShowAllAdmins.aspx.designer.cs">
+      <DependentUpon>ShowAllAdmins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ShowSuggestedNews.aspx.cs">
+      <DependentUpon>ShowSuggestedNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ShowSuggestedNews.aspx.designer.cs">
+      <DependentUpon>ShowSuggestedNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\ShowSuggestedWorks.aspx.cs">
+      <DependentUpon>ShowSuggestedWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\ShowSuggestedWorks.aspx.designer.cs">
+      <DependentUpon>ShowSuggestedWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contests.aspx.cs">
+      <DependentUpon>Contests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contests.aspx.designer.cs">
+      <DependentUpon>Contests.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Files.aspx.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Files.aspx.designer.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Galleries.aspx.cs">
+      <DependentUpon>Galleries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Galleries.aspx.designer.cs">
+      <DependentUpon>Galleries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporter.aspx.cs">
+      <DependentUpon>Reporter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporter.aspx.designer.cs">
+      <DependentUpon>Reporter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporterShowNews.aspx.cs">
+      <DependentUpon>ReporterShowNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporterShowNews.aspx.designer.cs">
+      <DependentUpon>ReporterShowNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowContest.aspx.cs">
+      <DependentUpon>ShowContest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowContest.aspx.designer.cs">
+      <DependentUpon>ShowContest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowGallery.aspx.cs">
+      <DependentUpon>ShowGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowGallery.aspx.designer.cs">
+      <DependentUpon>ShowGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowWork.aspx.cs">
+      <DependentUpon>ShowWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowWork.aspx.designer.cs">
+      <DependentUpon>ShowWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuggestNews.aspx.cs">
+      <DependentUpon>SuggestNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuggestNews.aspx.designer.cs">
+      <DependentUpon>SuggestNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SuggestWork.aspx.cs">
+      <DependentUpon>SuggestWork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SuggestWork.aspx.designer.cs">
+      <DependentUpon>SuggestWork.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterface.Master.cs">
+      <DependentUpon>UserInterface.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInterface.Master.designer.cs">
+      <DependentUpon>UserInterface.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSuggestedNews.aspx.cs">
+      <DependentUpon>ViewSuggestedNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSuggestedNews.aspx.designer.cs">
+      <DependentUpon>ViewSuggestedNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSuggestedWorks.aspx.cs">
+      <DependentUpon>ViewSuggestedWorks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSuggestedWorks.aspx.designer.cs">
+      <DependentUpon>ViewSuggestedWorks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Works.aspx.cs">
+      <DependentUpon>Works.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Works.aspx.designer.cs">
+      <DependentUpon>Works.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPanel\ckeditor\CHANGES.md" />
+    <Content Include="AdminPanel\ckeditor\LICENSE.md" />
+    <Content Include="AdminPanel\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="AdminPanel\ckeditor\plugins\scayt\README.md" />
+    <Content Include="AdminPanel\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="AdminPanel\ckeditor\plugins\wsc\README.md" />
+    <Content Include="AdminPanel\ckeditor\README.md" />
+    <Content Include="AdminPanel\ckeditor\samples\assets\posteddata.php" />
+    <Content Include="AdminPanel\ckeditor\samples\assets\Thumbs.db" />
+    <Content Include="AdminPanel\ckeditor\samples\plugins\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="AdminPanel\ckeditor\samples\sample_posteddata.php" />
+    <Content Include="AdminPanel\ckeditor\skins\moono\readme.md" />
+    <Content Include="AdminPanel\AdminPanel.Master" />
+    <Content Include="UserInterface.Master" />
+    <Content Include="files\AuthenticationService.Authenticate" />
+    <Content Include="files\css" />
+    <Content Include="files\css%281%29" />
+    <Content Include="files\jsapi" />
+    <Content Include="files\maps" />
+    <Content Include="files\QuotaService.RecordEvent" />
+    <Content Include="files\StaticMapService.GetMapImage" />
+    <Content Include="files\user_timeline.json" />
+    <Content Include="files\ViewportInfoService.GetViewportInfo" />
+    <Content Include="files\vt" />
+    <Content Include="files\vt%281%29" />
+    <Content Include="files\vt%282%29" />
+    <Content Include="files\vt%283%29" />
+    <Content Include="files\vt%284%29" />
+    <Content Include="files\vt%285%29" />
+    <Content Include="files\vt%286%29" />
+    <Content Include="files\vt%287%29" />
+    <Content Include="files\vt%288%29" />
+    <Content Include="files\vt%289%29" />
+    <None Include="Properties\PublishProfiles\Somee.pubxml" />
+    <None Include="Properties\PublishProfiles\Zaedno-KJ.pubxml" />
+    <None Include="Properties\PublishProfiles\Zaedno.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AdminPanel\PermanentFiles\" />
+    <Folder Include="AdminPanel\TempFiles\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:2275/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.csprojResolveAssemblyReference.cache
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.dll
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.pdb
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\bin\CKEditor.NET.pdb
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.dll
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.pdb

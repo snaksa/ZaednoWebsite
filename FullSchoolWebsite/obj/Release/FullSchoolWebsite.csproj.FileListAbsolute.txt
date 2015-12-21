@@ -1,0 +1,12 @@
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.dll
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.pdb
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\bin\CKEditor.NET.pdb
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\obj\Release\FullSchoolWebsite.csprojResolveAssemblyReference.cache
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\obj\Release\FullSchoolWebsite.dll
+D:\Visual Studio Projects\FullSchoolWebsite\FullSchoolWebsite\obj\Release\FullSchoolWebsite.pdb
+E:\Visual studio projects\FullSchoolWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.dll.config
+E:\Visual studio projects\FullSchoolWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.dll
+E:\Visual studio projects\FullSchoolWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.pdb
+E:\Visual studio projects\FullSchoolWebsite\FullSchoolWebsite\obj\Release\FullSchoolWebsite.dll
+E:\Visual studio projects\FullSchoolWebsite\FullSchoolWebsite\obj\Release\FullSchoolWebsite.pdb
+E:\Visual studio projects\FullSchoolWebsite\FullSchoolWebsite\obj\Release\FullSchoolWebsite.csprojResolveAssemblyReference.cache

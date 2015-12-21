@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPanel.master.cs" Inherits="FullSchoolWebsite.AdminPanel.AdminPanel" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <title></title>
+    <link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" />
+    <link href="css/Alerts.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+	<link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" />
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <script src="js/jquery-1.5.2.min.js" type="text/javascript"></script>
+    <script src="js/hideshow.js" type="text/javascript"></script>
+    <script src="js/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/jquery.equalHeight.js"></script>
+    <script src="js/myJSfunctions.js"></script>
+
+    <script>
+        function SubmitButton(id) {
+            $(id).click();
+        }
+
+        function SelectFile(id) {
+            $(id).click();
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.column').equalHeight();
+        });
+</script>
+
+</head>
+<body>
+    <header id="header">
+        <hgroup>
+            <h1 class="site_title"><a href="Index.aspx">Начало</a></h1>
+            <asp:ContentPlaceHolder runat="server" ID="page_name"></asp:ContentPlaceHolder>
+            <div class="btn_view_site"><a href="../Default.aspx">Към сайта</a></div>
+        </hgroup>
+    </header>
+    <!-- end of header bar -->
+
+    <section id="secondary_bar">
+        <div class="user">
+            <p><span runat="server" id="AdminName">John Doe</span></p>
+        </div>
+    </section>
+    <!-- end of secondary bar -->
+
+    <div style="width: 1000px;">
+
+        <aside id="sidebar" class="column">
+            <hr />
+            <h3>Начална страница</h3>
+            <ul class="toggle">
+                <li class="icn_edit_article"><a href="EditMainNews.aspx">Слайдшоу</a></li>
+                <li class="icn_edit_article"><a href="EditStatements.aspx">Изявления</a></li>
+            </ul>
+            <h3>Творби</h3>
+            <ul class="toggle">
+                <li class="icn_new_article"><a href="AddWork.aspx">Добави творба</a></li>
+                <li class="icn_categories"><a href="ShowSuggestedWorks.aspx">Предложени творби</a></li>
+                <li class="icn_alert_success"><a href="ShowAcceptedWorks.aspx">Одобрени творби</a></li>
+            </ul>
+            <h3>Конкурси</h3>
+            <ul class="toggle">
+                <li class="icn_new_article"><a href="AddContest.aspx">Добави конкурс</a></li>
+                <li class="icn_edit_article"><a href="EditContests.aspx">Редактирай конкурс</a></li>
+            </ul>
+            <h3>Галерия</h3>
+            <ul class="toggle">
+                <li class="icn_new_article"><a href="AddGallery.aspx">Добави галерия</a></li>
+                <li class="icn_photo"><a href="EditGalleries.aspx">Редактирай галерия</a></li>
+            </ul>
+            <h3>Архив</h3>
+            <ul class="toggle">
+                <li class="icn_edit_article"><a href="AddAndRemoveFile.aspx">Добавяне и редактиране на файл</a></li>
+            </ul>
+            <h3>Репортерът си ти</h3>
+            <ul class="toggle">
+                <li class="icn_new_article"><a href="AddNews.aspx">Добави новина</a></li>
+                <li class="icn_categories"><a href="ShowSuggestedNews.aspx">Предложени новини</a></li>
+                <li class="icn_alert_success"><a href="ShowAcceptedNews.aspx">Одобрени новини</a></li>
+            </ul>
+            <h3>Администратори</h3>
+            <ul class="toggle">
+                <li class="icn_add_user"><a href="AddAdmin.aspx">Добави администратор</a></li>
+                <li class="icn_view_users"><a href="ShowAllAdmins.aspx">Преглед на администраторите</a></li>
+                <li class="icn_profile"><a href="#" runat="server" id="EditMySettings" onserverclick="EditMySettings_ServerClick" >Моят профил</a></li>
+                <li class="icn_jump_back"><a href="#" id="SignOut" runat="server" onserverclick="SignOut_ServerClick" >Излизане</a></li>
+            </ul>
+
+            <footer>
+                <hr />
+                <p><strong>© 2015 СОУ "Христо Ботев" гр. Кубрат</strong></p>
+            </footer>
+        </aside>
+        <!-- end of sidebar -->
+
+        <form id="form1" runat="server">
+            <div style="height:1500px;">
+                <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
