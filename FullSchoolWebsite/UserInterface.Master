@@ -202,12 +202,8 @@
     <!-- footer-bottom -->
     <div id="footer-bottom">
         <div class="bottom-wrapper">
-            <div style="float: left;margin-right:10px;">
-                <TABLE><TR><TD align="center"><a HREF="http://www.zaedno.somee.com" target="_top" title="Посещения"><img src="http://bgfree.com/counter/counter.php?page=17193&digit=a" border="0" align="middle" alt="Посещения"></a></TD></TR></TABLE>
-                <!-- <a href="http://www.zaedno.somee.com" target="_blank" title="Уникални посещения"><img border="0" alt="Уникални посещения" src="http://mycounter.tinycounter.com/index.php?user=snaksa"></a> -->
-            </div>
             <div id="bottom-left" style="float: left;">
-                © 2015 СОУ "Христо Ботев" гр. Кубрат
+                © 2017 СУ "Христо Ботев" гр. Кубрат
             </div>
 
 

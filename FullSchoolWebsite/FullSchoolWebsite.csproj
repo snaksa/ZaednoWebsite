@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -951,6 +952,7 @@
     <None Include="Properties\PublishProfiles\Somee.pubxml" />
     <None Include="Properties\PublishProfiles\Zaedno-KJ.pubxml" />
     <None Include="Properties\PublishProfiles\Zaedno.pubxml" />
+    <None Include="Properties\PublishProfiles\ZaednoICN.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

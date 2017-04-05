@@ -13,7 +13,7 @@
                 <ItemTemplate>
                     <div id='Div<%#Eval("Position") %>' class="slide">
                         <img src='<%#Eval("ImagePath") %>' width="940" height="360">
-                        <div class="caption">Клуб по журналистика при СОУ "Христо Ботев" град Кубрат</div>
+                        <div class="caption">Клуб по журналистика при СУ "Христо Ботев" град Кубрат</div>
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
@@ -23,7 +23,7 @@
         <div id="front-slides-cover"></div>
         <!-- Headline -->
         <div id="headline">
-            <h6>Клуб по журналистика при СОУ "Христо Ботев" град Кубрат</h6>
+            <h6>Клуб по журналистика при СУ "Христо Ботев" град Кубрат</h6>
         </div>
         <!-- ENDS Headline -->
 

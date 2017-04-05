@@ -10,7 +10,7 @@
     </div>
 
     <!-- side content -->
-    <div id="side-content">
+    <div id="side-content" style="text-align:justify;">
 
         <h4 style="text-align: center;">КОИ СМЕ НИЕ?</h4>
         <p>

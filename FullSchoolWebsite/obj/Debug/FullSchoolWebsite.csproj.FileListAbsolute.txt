@@ -9,3 +9,9 @@ E:\Windows\ZaednoWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.dll
 E:\Windows\ZaednoWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.pdb
 E:\Windows\ZaednoWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.dll
 E:\Windows\ZaednoWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.pdb
+C:\Users\Sinan\Documents\ZaednoWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.dll.config
+C:\Users\Sinan\Documents\ZaednoWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.dll
+C:\Users\Sinan\Documents\ZaednoWebsite\FullSchoolWebsite\bin\FullSchoolWebsite.pdb
+C:\Users\Sinan\Documents\ZaednoWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.csprojResolveAssemblyReference.cache
+C:\Users\Sinan\Documents\ZaednoWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.dll
+C:\Users\Sinan\Documents\ZaednoWebsite\FullSchoolWebsite\obj\Debug\FullSchoolWebsite.pdb
